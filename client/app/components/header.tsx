@@ -1,6 +1,7 @@
 import { Menu, CirclePlus } from "lucide-react"
 import SideBar from "./sidebar"
 import { useState } from "react"
+import { Link } from "react-router"
 
 export default function Header(){
     const [sideBarOpen, setSideBarOpen] = useState<boolean>(false)
@@ -9,8 +10,10 @@ export default function Header(){
         {<SideBar isOpen={sideBarOpen} setIsOpen={setSideBarOpen}/>}
         <header className="bg-[#12171D] font-[500] font-sans  p-4 w-full">
             <div className="flex justify-between items-center">
-                <img src="/logo.png" alt="logo" className="w-[23.56px] h-[32px]" />
-                <Menu onClick={() => setSideBarOpen(!sideBarOpen)} className="text-6xl"/>
+                <Link to="/">
+                    <img src="/logo.png" alt="logo" className="w-[23.56px] h-[32px] cursor-pointer" />
+                </Link>
+                <Menu onClick={() => setSideBarOpen(!sideBarOpen)} className="text-6xl cursor-pointer"/>
             </div>
 
             <div className="mt-8 flex justify-between items-center">

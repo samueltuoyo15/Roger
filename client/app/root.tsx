@@ -32,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body onContextMenu={(e) => e.preventDefault()}>
         {children}
         <ScrollRestoration />
         <Scripts />

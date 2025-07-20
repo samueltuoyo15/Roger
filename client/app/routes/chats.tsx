@@ -1,4 +1,4 @@
-import type { Route } from "./+types/home";
+import type { Route } from "./+types/chats";
 import { Chats } from "../chats/chats";
 import Header from "~/components/header"
 
@@ -9,7 +9,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
+export default function ChatsField() {
   return(
     <>
       <Header />
