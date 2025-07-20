@@ -4,24 +4,26 @@ import { users, chatContainers, CustomOnlineBadge } from "./utils/utils"
 export function Chats() {
 
   return (
-    <main className="p-4">
+    <>
+    <main className="p-4 bg-[#12171D]">
       <section className="flex items-center gap-5 overflow-x-auto scrollbar-hide">
         {users.map((user) => (
         <figure aria-labelledby={`caption-${user.username}`} key={user.username} className="min-w-[72px] flex-shrink-0 text-center">
-        <img src={user.img} alt="user dp" className="mb-2 rounded-[78px] w-[58px] h-[58px]" />
+        <img src={user.img} alt="user dp" className="rounded-[78px] w-[58px] h-[58px]" />
         <CustomOnlineBadge />
         <figcaption className="font-[500] font-sans text-center text-[16px]">{user.username}</figcaption>
       </figure>
       ))}
       </section>
-      <ChatsContainer />
     </main>
+    <ChatsContainer />
+  </>
   )
 }
 
 export function ChatsContainer(){
   return (
-    <main className="mt-10">
+    <main className="p-4 mt-10">
     <section className="flex flex-col items-center gap-7">
       {chatContainers.map((chat) => (
         <figure aria-labelledby={`caption-${chat.username}`} key={chat.username} className="w-full flex justify-between items-center">

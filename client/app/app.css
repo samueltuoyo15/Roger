@@ -17,7 +17,7 @@
 
 html, 
 body {
-  @apply bg-white dark:bg-[#12171D];
+  @apply bg-white dark:bg-[#1E2126];
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;

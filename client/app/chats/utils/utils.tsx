@@ -18,6 +18,6 @@
 
   export function CustomOnlineBadge() {
     return (
-       <div className="relative bottom-16 left-11 rounded-full bg-[#34E449] w-[12px] h-[12px]"></div>
+       <div className="relative bottom-14 left-11 rounded-full bg-[#34E449] w-[12px] h-[12px]"></div>
     )
   }
