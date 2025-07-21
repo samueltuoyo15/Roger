@@ -6,8 +6,8 @@ import { CirclePlus } from "lucide-react"
 export function Chats() {
   return (
     <>
-    <main className="p-4">
-      <div className="mt-8 flex justify-between items-center">
+    <main className="p-4 md:w-[334px]">
+      <div className="md:mt-0 mt-8 flex justify-between items-center">
         <h2 className="text-[24px] font-sans font-[500]">Chats</h2>
         <CirclePlus className="text-5xl"/>
       </div>
@@ -26,8 +26,8 @@ export function Chats() {
       </figure>
       ))}
       </section>
-    </main>
     <ChatsContainer />
+    </main>
   </>
   )
 }

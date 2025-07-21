@@ -1,6 +1,7 @@
 import type { Route } from "./+types/chats";
 import { Chats } from "../chats/chats";
 import Header from "~/components/header"
+import Chat from "./chat"
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,8 +14,9 @@ export default function ChatsField() {
   return(
     <>
       <Header />
-      <section className="md:ml-34">
+      <section className="md:ml-34 flex">
       <Chats />
+      <Chat />
       </section>
     </>
   )

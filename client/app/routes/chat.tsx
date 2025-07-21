@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react"
 
 export default function Chat(){
     return (
-        <section className="p-4">
+        <section className="p-4 md:w-[720px] flex flex-col min-h-screen">
          <header className="flex justify-between items-center">
                     
         <div className="flex items-center relative">
@@ -39,7 +39,7 @@ export default function Chat(){
 
 export function ChatContainer(){
     return (
-       <section className="mt-14">
+       <section className="mt-10">
          <div className="mb-5">
             <img src={chatContainers[0].img} alt="user dp" className="mr-5 float-left rounded-[78px] w-[58px] h-[58px]"/>
             <p className="p-2 inline-flex w-[242px] font-sans font-[500] rounded-[8px] h-auto text-[12px] text-[#ffffff] bg-[#12171D]">Hi User G, I noticed you mentioned needing someone to walk your dog. I love dogs and can help with that. Let's coordinate a time to meet your furry friend.</p>
@@ -72,7 +72,7 @@ export function SendMessageArea(){
         }
     }, [])
     return (
-        <div className="bg-[#12171D] h-[50px] max-w-screen-md mx-auto left-4 right-4 rounded-[8px] fixed bottom-1 p-0">
+        <div className="bg-[#12171D] w-[350px] md:w-[650px] h-[50px] rounded-[8px] fixed bottom-1 p-0">
           <div className="relative">
             <Mic className="cursor-pointer absolute bottom-1 left-2"/>
            <input 
