@@ -16,8 +16,8 @@
     { img: "/user6.png", username: "Billy"}
   ]
 
-  export function CustomOnlineBadge() {
+  export function CustomOnlineBadge({ className } : {className?: string}) {
     return (
-       <div className="relative bottom-14 left-11 rounded-full bg-[#34E449] w-[12px] h-[12px]"></div>
+       <div className={`${className}`}></div>
     )
   }

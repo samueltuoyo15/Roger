@@ -1,8 +1,8 @@
 
 import { users, chatContainers, CustomOnlineBadge } from "./utils/utils"
+import { useNavigate } from "react-router"
 
 export function Chats() {
-
   return (
     <>
     <main className="p-4 bg-[#12171D]">
@@ -10,7 +10,7 @@ export function Chats() {
         {users.map((user) => (
         <figure aria-labelledby={`caption-${user.username}`} key={user.username} className="cursor-pointer min-w-[72px] flex-shrink-0 text-center">
         <img src={user.img} alt="user dp" className="rounded-[78px] w-[58px] h-[58px]" />
-        <CustomOnlineBadge />
+        <CustomOnlineBadge className="relative bottom-14 left-11 rounded-full bg-[#34E449] w-[12px] h-[12px]"/>
         <figcaption className="font-[500] font-sans text-center text-[16px]">{user.username}</figcaption>
       </figure>
       ))}
@@ -22,11 +22,12 @@ export function Chats() {
 }
 
 export function ChatsContainer(){
+  const navigate = useNavigate()
   return (
     <main className="p-4 mt-10">
     <section className="flex flex-col items-center gap-7">
       {chatContainers.map((chat) => (
-        <figure aria-labelledby={`caption-${chat.username}`} key={chat.username} className="cursor-pointer w-full flex justify-between items-center">
+        <figure onClick={() => navigate("/chats/chat/1")}aria-labelledby={`caption-${chat.username}`} key={chat.username} className="cursor-pointer w-full flex justify-between items-center">
           
         <div className="flex items-center">
           <img src={chat.img} alt="user dp" className="mr-2 float-left rounded-[78px] w-[58px] h-[58px]"/>
