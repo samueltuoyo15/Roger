@@ -8,7 +8,7 @@
 @import "@fontsource/dm-sans/800.css";
 @import "@fontsource/dm-sans/900.css";
 @import "tailwindcss";
-@import 'tailwind-scrollbar-hide/v4';
+@import "tailwind-scrollbar-hide/v4";
 
 
 @theme {
