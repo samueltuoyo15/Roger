@@ -12,7 +12,7 @@ export default function Header(){
         {<SideBar isOpen={sideBarOpen} setIsOpen={setSideBarOpen}/>}
             <div className="flex justify-between items-center">
                 <Link to="/">
-                    <img src="/logo.png" alt="logo" className="hidden md:inline-block w-[23.56px] h-[32px] cursor-pointer" />
+                    <img src="/logo.png" alt="logo" className="md:inline-block w-[23.56px] h-[32px] cursor-pointer" />
                 </Link>
                 <Menu onClick={() => setSideBarOpen(!sideBarOpen)} className="md:hidden text-6xl cursor-pointer"/>
             </div>

@@ -1,0 +1,44 @@
+{
+  "name": "roger-chat-app-backend",
+  "version": "1.0.0",
+  "description": "full stack chat applicaton",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon -r tsconfig-paths/register server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueltuoyo15/Roger.git"
+  },
+  "keywords": [
+    "chat-app",
+    "full-stack-chat-app",
+    "messenger"
+  ],
+  "author": "Samuel Tuoyo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samueltuoyo15/Roger/issues"
+  },
+  "homepage": "https://github.com/samueltuoyo15/Roger#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/helmet": "^0.0.48",
+    "@types/node": "^24.0.15",
+    "@types/socket.io": "^3.0.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0",
+    "socket.io": "^4.8.1"
+  }
+}
