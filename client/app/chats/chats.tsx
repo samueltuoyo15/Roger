@@ -1,11 +1,22 @@
 
 import { users, chatContainers, CustomOnlineBadge } from "./utils/utils"
 import { useNavigate } from "react-router"
+import { CirclePlus } from "lucide-react"
 
 export function Chats() {
   return (
     <>
-    <main className="p-4 bg-[#12171D]">
+    <main className="p-4">
+      <div className="mt-8 flex justify-between items-center">
+        <h2 className="text-[24px] font-sans font-[500]">Chats</h2>
+        <CirclePlus className="text-5xl"/>
+      </div>
+
+        <input 
+             type="search"
+             placeholder="Search"
+             className="mb-10 p-2 text-[#B6B6B6] font-sans font-[400] bg-[#1E2126] w-full rounded-[8px] gap-[10px] h-[40px]"
+       />
       <section className="flex items-center gap-5 overflow-x-auto scrollbar-hide">
         {users.map((user) => (
         <figure aria-labelledby={`caption-${user.username}`} key={user.username} className="cursor-pointer min-w-[72px] flex-shrink-0 text-center">
@@ -24,7 +35,7 @@ export function Chats() {
 export function ChatsContainer(){
   const navigate = useNavigate()
   return (
-    <main className="p-4 mt-10">
+    <main className="p-4">
     <section className="flex flex-col items-center gap-7">
       {chatContainers.map((chat) => (
         <figure onClick={() => navigate("/chats/chat/1")}aria-labelledby={`caption-${chat.username}`} key={chat.username} className="cursor-pointer w-full flex justify-between items-center">

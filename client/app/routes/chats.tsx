@@ -13,7 +13,9 @@ export default function ChatsField() {
   return(
     <>
       <Header />
+      <section className="md:ml-34">
       <Chats />
+      </section>
     </>
   )
 }
