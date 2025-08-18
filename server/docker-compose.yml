@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: roger
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    networks:
+      - chatnet
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NODEMON_LEGACY_WATCH=true
+
+  postgres:
+    image: postgres:16
+    container_name: postgres-chat
+    restart: always
+    environment:
+      POSTGRES_USER: chat
+      POSTGRES_PASSWORD: chatpass
+      POSTGRES_DB: chatdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - chatnet
+
+networks:
+  chatnet:
+
+volumes:
+  pgdata:

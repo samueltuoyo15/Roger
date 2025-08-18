@@ -1,0 +1,8 @@
+{
+  "watch": ["/app"],
+  "ext": "ts,js,json",
+  "ignore": ["/app/node_modules"],
+  "execMap": {
+    "ts": "node -r ts-node/register -r tsconfig-paths/register"
+  }
+}

@@ -1,9 +1,9 @@
 import express from "express"
 import { createServer } from "http"
 import { Server } from "socket.io"
-import logger from "@/utils/logger"
+import logger from "@/common/utils/logger"
 import { config } from "dotenv"
-config()
+config()    
 
 const app = express()
 const server = createServer(app)
