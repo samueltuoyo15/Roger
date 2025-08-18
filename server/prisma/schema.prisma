@@ -9,10 +9,21 @@ datasource db {
 
 model User {
     id String @id @default(uuid())
-    username String? @unique
+    username String @unique
     phone String @unique
     profile_picture String?
     is_verified Boolean @default(false)
 
-    @@map("users")
+    @@map("user")
+}
+
+model Otp {
+    id String @id @default(uuid())
+    phone String
+    code String 
+    expires_at DateTime 
+    created_at DateTime @default(now())
+
+    @@index([phone])
+    @@map("otp")
 }

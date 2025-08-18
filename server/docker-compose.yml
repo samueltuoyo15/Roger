@@ -35,6 +35,20 @@ services:
     networks:
       - chatnet
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-chat
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@chat.com  
+      PGADMIN_DEFAULT_PASSWORD: adminpass    
+    ports:
+      - "5050:80" 
+    depends_on:
+      - postgres
+    networks:
+      - chatnet
+
 networks:
   chatnet:
 

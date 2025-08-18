@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "full stack chat applicaton",
   "main": "server.ts",
- "scripts": {
-  "dev": "prisma generate && nodemon -r tsconfig-paths/register server.ts",
-  "prisma:migrate": "prisma migrate dev",
-  "prisma:generate": "prisma generate",
-  "prisma:studio": "prisma studio"
-},
+  "scripts": {
+    "test": "vitest",
+    "dev": "nodemon -r tsconfig-paths/register server.ts",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samueltuoyo15/Roger.git"
@@ -25,30 +26,38 @@
   },
   "homepage": "https://github.com/samueltuoyo15/Roger#readme",
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/helmet": "^0.0.48",
+    "@types/joi": "^17.2.2",
     "@types/node": "^24.0.15",
     "@types/pg": "^8.15.5",
     "@types/socket.io": "^3.0.1",
     "nodemon": "^3.1.10",
+    "prisma": "^6.14.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@bull-board/api": "^6.12.0",
     "@bull-board/express": "^6.12.0",
     "@prisma/client": "^6.14.0",
+    "argon2": "^0.44.0",
     "bullmq": "^5.58.0",
+    "c": "^1.1.1",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
+    "joi": "^18.0.0",
     "pg": "^8.16.3",
     "pino": "^9.7.0",
     "pino-pretty": "^13.0.0",
-    "prisma": "^6.14.0",
+    "rate-limit-redis": "^4.2.2",
     "socket.io": "^4.8.1"
   }
 }
