@@ -2,7 +2,7 @@ import express from "express"
 import { createServer } from "http"
 import helmet from "helmet"
 import authRoute from "@/routes/auth.route"
-//import cookieParser from "cookie-parser"
+import errorHandler from "./middleware/error.handler"
 import requestLogger from "@/middleware/request.logger"
 import logger from "@/common/utils/logger"
 import dotenv from "dotenv"
@@ -15,6 +15,7 @@ app.use(helmet())
 app.use("/api/v1/auth", authRoute)
 const server = createServer(app)
 
+app.use(errorHandler)
 
 const startServer = async () => {
     try{
